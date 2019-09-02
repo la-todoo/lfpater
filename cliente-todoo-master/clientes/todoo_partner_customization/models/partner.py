@@ -3,6 +3,7 @@ import re
 
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
+from datetime  import date 
 
 alphabet = [
     ('A', 'A'),
@@ -37,7 +38,11 @@ alphabet = [
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
+    
 
+
+    edad=fields.Datetime('edad',required=True)
+    fecha_nacimiento=.fields.Datetime('fecha_nacimiento',required=True)
     field_1 = fields.Many2one('address.code', required=True)
     field_2 = fields.Integer(required=True)
     field_3 = fields.Selection(alphabet)
@@ -126,3 +131,10 @@ class ResPartner(models.Model):
             self.name = "%s %s" % (
                 self.company_name if self.company_name else "",
                 self.company_nature if self.company_nature else "")
+
+
+ 
+    def _onchange_edad(edad):
+        hoy = date.today()
+        edad = hoy.year -   fecha_nacimiento.year - ((hoy.month, hoy.day) < (  fecha_nacimiento.month,   fecha_nacimiento.day))
+
