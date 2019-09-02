@@ -64,6 +64,8 @@
                         <label for="dv" string="DV"/>   <field name="dv"/>
                     </div>
                     <field name="ciiu" placeholder="CIIU" widget="many2many_tags"/>
+                    <field name="edad" placeholder="edad"/>
+                    <field name="fecha_nacimiento" placeholder="fecha_nacimiento"/>
             </xpath>
         </field>
     </record>
