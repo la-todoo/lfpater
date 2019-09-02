@@ -42,7 +42,8 @@ class ResPartner(models.Model):
 
 
     edad=fields.Datetime('edad',required=True)
-    fecha_nacimiento=.fields.Datetime('fecha_nacimiento',required=True)
+    fecha_nacimiento=fields.Datetime('fecha_nacimiento',required=True)
+    lf=fields.Char('lf',required=True)
     field_1 = fields.Many2one('address.code', required=True)
     field_2 = fields.Integer(required=True)
     field_3 = fields.Selection(alphabet)
