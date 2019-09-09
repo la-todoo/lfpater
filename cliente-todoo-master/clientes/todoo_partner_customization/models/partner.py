@@ -60,7 +60,7 @@ class ResPartner(models.Model):
     name = fields.Char(default=lambda self: self.first_name)
     first_name = fields.Char()
     middle_name = fields.Char()
-    pater=field.char()
+    pater=fields.char()
     last_name = fields.Char()
     second_last_name = fields.Char()
     nit = fields.Char(string='NIT', size=9)

@@ -66,8 +66,7 @@
                     <field name="ciiu" placeholder="CIIU" widget="many2many_tags"/>
                     <field name="edad" placeholder="edad"/>
                     <field name="fecha_nacimiento" placeholder="fecha_nacimiento"/>
-                    <field name="lf"/>
-                    <field name="Pater"/>
+                    
             </xpath>
         </field>
     </record>
