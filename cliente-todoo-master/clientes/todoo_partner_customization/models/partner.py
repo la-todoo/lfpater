@@ -4,6 +4,9 @@ import re
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
 from datetime  import date 
+from datetime import datetime
+
+
 
 alphabet = [
     ('A', 'A'),
@@ -57,6 +60,7 @@ class ResPartner(models.Model):
     field_11 = fields.Many2one('address.code')
     field_12 = fields.Integer()
     street = fields.Char()
+
     name = fields.Char(default=lambda self: self.first_name)
     first_name = fields.Char()
     middle_name = fields.Char()
@@ -138,3 +142,16 @@ class ResPartner(models.Model):
  
     
 
+  
+    from_date=fields.Date(string="Register date")
+    final_date=fields.Date(string="Last date")
+    total_days=fields.Integer(string="TOTAL DAYS")
+
+
+    @api.onchange('from_date', 'final_date','total_days')
+    def calculate_date(self):
+        if self.from_date and self.final_date:
+            d1=datetime.strptime(str(self.from_date),'%Y-%m-%d') 
+            d2=datetime.strptime(str(self.final_date),'%Y-%m-%d')
+            d3=d2-d1
+            self.total_days=str(d3.days)
