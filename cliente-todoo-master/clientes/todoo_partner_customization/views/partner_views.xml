@@ -66,7 +66,9 @@
                     <field name="ciiu" placeholder="CIIU" widget="many2many_tags"/>
                     <field name="edad" placeholder="edad"/>
                     <field name="fecha_nacimiento" placeholder="fecha_nacimiento"/>
-                    
+                    <field name="d1" placeholder="Fecha de nacimiento"/>
+                    <field name="d2" placeholder="Fecha actual"/>
+                    <field name="d3" placeholder="Edad"/>
             </xpath>
         </field>
     </record>
