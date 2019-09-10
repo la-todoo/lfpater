@@ -143,7 +143,7 @@ class ResPartner(models.Model):
     
 
   
-    from_date=fields.Date(string="Register date")
+    '''from_date=fields.Date(string="Register date")
     final_date=fields.Date(string="Last date")
     total_days=fields.Integer(string="TOTAL DAYS")
 
@@ -154,4 +154,4 @@ class ResPartner(models.Model):
             d1=datetime.strptime(str(self.from_date),'%Y-%m-%d') 
             d2=datetime.strptime(str(self.final_date),'%Y-%m-%d')
             d3=d2-d1
-            self.total_days=str(d3.days)
+            self.total_days=str(d3.days)'''

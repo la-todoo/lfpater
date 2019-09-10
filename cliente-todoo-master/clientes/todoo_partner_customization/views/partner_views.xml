@@ -66,9 +66,10 @@
                     <field name="ciiu" placeholder="CIIU" widget="many2many_tags"/>
                     <field name="edad" placeholder="edad"/>
                     <field name="fecha_nacimiento" placeholder="fecha_nacimiento"/>
-                    <field name="from_date" placeholder="Fecha de nacimiento"/>
+                    <!--<field name="from_date" placeholder="Fecha de nacimiento"/>
                     <field name="final_date" placeholder="Fecha actual"/>
-                    <field name="total_days" placeholder="Edad"/>
+                    <field name="total_days" placeholder="Edad"/>-->
+
             </xpath>
         </field>
     </record>
